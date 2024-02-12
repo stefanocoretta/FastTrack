@@ -57,7 +57,8 @@ procedure trackFolder
 
         Save as short text file: folder$ + "/formants/" + .basename$ + "_" + string$(.z) +"_.Formant"
         Remove
-
+        writeInfoLine: ""
+        writeFileLine:  folder$ + "/infos/" + .basename$ + "_info.txt", ""
         writeFileLine:  folder$ + "/infos/" + .basename$ + "_info.txt", .basename$ + ".wav"
         appendFileLine: folder$ + "/infos/" + .basename$ + "_info.txt", "Number of steps:"
         appendFileLine: folder$ + "/infos/" + .basename$ + "_info.txt", number_of_steps
